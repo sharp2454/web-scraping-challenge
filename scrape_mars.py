@@ -1,7 +1,6 @@
 
 
 #import dependencies
-import re
 import pandas as pd
 from splinter import Browser
 from bs4 import BeautifulSoup
@@ -135,7 +134,6 @@ hemisphere_image_urls = []
     return hemisphere_image_urls   
 
 ##    
-    
     def scrape_hemisphere(html_text):
         hemisphere_soup = BeautifulSoup(html_text, "html.parser")
         try:
