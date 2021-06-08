@@ -93,7 +93,7 @@ def hemisphere(browser):
     url = "https://marshemispheres.com/"
     browser.visit(url)
 
-hemisphere_image_urls = []
+    hemisphere_image_urls = []
 
 
 #obtain images of all hemispheres
@@ -134,7 +134,7 @@ hemisphere_image_urls = []
     return hemisphere_image_urls   
 
 ##    
-    def scrape_hemisphere(html_text):
+def scrape_hemisphere(html_text):
         hemisphere_soup = BeautifulSoup(html_text, "html.parser")
         try:
             title_element = hemisphere_soup.find("h2", class_="title").get_text()
@@ -151,7 +151,7 @@ hemisphere_image_urls = []
 
 
 #######
-    def scrape_all():
+def scrape_all():
         executable_path =  {'executable_path': ChromeDriverManager().install()}
         browser = Browser('chrome', **executable_path, headless=False)  
         news_title, news_paragraph = mars_news(browser)
@@ -171,5 +171,5 @@ hemisphere_image_urls = []
 
         return data
 
-    if __name__=="__main__":
+if __name__=="__main__":
     print(scrape_all())
