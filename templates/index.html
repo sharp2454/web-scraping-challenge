@@ -35,7 +35,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-12">
                 <h4>Featured Mars Image</h4>
                     <!-- If Images are False/None/Non-Existent, Then Default to Error Message -->
-                    <img src="{{mars.featured_image | default('static/images/error.png', true) }}" class="img-responsive" style="max-width:100%; max-height: auto;" alt="Mars Featured Image"/>
+                    <img src="{{mars.featured_image_url | default('static/images/error.png', true) }}" class="img-responsive" style="max-width:100%; max-height: auto;" alt="Mars Featured Image"/>
                 </div>
                                  </div>
                     </div>
